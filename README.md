@@ -53,9 +53,13 @@ Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
 Libraries are sharable across libraries and applications. They can be imported from `@supermarket/mylib`.
 
-## Development server
+## Development server Front-end
 
 Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+## Development server Back-end
+
+Run `ng serve my-app api` for a dev server. Your server will run on port 3333. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
