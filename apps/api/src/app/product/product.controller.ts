@@ -4,6 +4,7 @@ import {
   Delete,
   Get,
   Param,
+  Patch,
   Post,
   Query,
 } from '@nestjs/common';
@@ -44,6 +45,22 @@ export class ProductController {
   async removeProduct(@Query() params) {
     const { productID } = params;
     await this.productService.deleteProduct(productID);
+    return null;
+  }
+
+  @Patch(':id')
+  async updateProduct(
+    @Param('id') productId: string,
+    @Body('title') productTitle: string,
+    @Body('description') productDesc: string,
+    @Body('price') productPrice: number
+  ) {
+    await this.productService.updateProduct(
+      productId,
+      productTitle,
+      productDesc,
+      productPrice
+    );
     return null;
   }
 }

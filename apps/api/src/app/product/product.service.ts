@@ -40,6 +40,25 @@ export class ProductService {
     return product;
   }
 
+  async updateProduct(
+    productId: string,
+    title: string,
+    desc: string,
+    price: number
+  ): Promise<void> {
+    const updatedProduct = await this.findProduct(productId);
+    if (title) {
+      updatedProduct.title = title;
+    }
+    if (desc) {
+      updatedProduct.description = desc;
+    }
+    if (price) {
+      updatedProduct.price = price;
+    }
+    updatedProduct.save();
+  }
+
   private async findProduct(id: string): Promise<Product> {
     let product;
     try {
