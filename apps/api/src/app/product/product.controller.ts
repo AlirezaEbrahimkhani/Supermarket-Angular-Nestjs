@@ -1,4 +1,12 @@
-import { Body, Controller, Delete, Get, Post, Query } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Query,
+} from '@nestjs/common';
 import { Product } from './product.model';
 import { ProductService } from './product.service';
 
@@ -20,9 +28,8 @@ export class ProductController {
     return { id: generatedId };
   }
 
-  @Get()
-  async getSingleProduct(@Query() params): Promise<Product> {
-    const { productID } = params;
+  @Get(':id')
+  async getSingleProduct(@Param('id') productID): Promise<Product> {
     const product = await this.productService.getSingleProduct(productID);
     return product;
   }
