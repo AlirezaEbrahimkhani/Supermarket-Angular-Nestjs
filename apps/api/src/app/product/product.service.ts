@@ -26,14 +26,14 @@ export class ProductService {
     return products;
   }
 
-  async deleteProduct(prodId: string) {
+  async deleteProduct(prodId: string): Promise<void> {
     const result = await this.productModel.deleteOne({ _id: prodId }).exec();
     if (result.n === 0) {
       throw new NotFoundException('Could not find product.');
     }
   }
 
-  async getSingleProduct(productId: string) {
+  async getSingleProduct(productId: string): Promise<Product> {
     const product = await this.findProduct(productId);
     return product;
   }
