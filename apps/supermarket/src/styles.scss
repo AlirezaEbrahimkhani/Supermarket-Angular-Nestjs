@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/styles/main-classes.scss';
+@import './assets/styles/formly.scss';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+}
