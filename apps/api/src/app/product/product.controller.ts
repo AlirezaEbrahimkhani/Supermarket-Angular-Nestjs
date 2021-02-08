@@ -25,6 +25,7 @@ export class ProductController {
     @Body() insertProductDTO: InsertProductDTO
   ): Promise<{ id: string }> {
     const { roleID } = user;
+    insertProductDTO['price'] = Number(insertProductDTO['price']);
     if (roleID === 1) {
       const generatedId = await this.productService.insertProduct(
         insertProductDTO
