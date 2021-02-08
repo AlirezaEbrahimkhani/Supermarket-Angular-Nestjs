@@ -1,0 +1,97 @@
+<div class="wrapper">
+  <div class="header">
+    <div class="img-wrapper">
+      <img
+        class="header-img"
+        src="./../../../../assets/login-register-header.jpg"
+        alt="login-register"
+      />
+    </div>
+    <mat-card class="login-card">
+      <mat-tab-group #stepper [selectedIndex]="selectedIndex" id="tab">
+        <mat-tab>
+          <form [formGroup]="loginForm">
+            <div class="header text-center mb-5 mt-2">
+              <h4>Login</h4>
+            </div>
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Username</mat-label>
+              <input
+                matInput
+                placeholder="Username"
+                formControlName="username"
+              />
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Passport</mat-label>
+              <input
+                matInput
+                placeholder="Passport"
+                type="password"
+                formControlName="password"
+              />
+            </mat-form-field>
+            <div class="btn-wrapper">
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="onSubmit()"
+                class="px-4"
+              >
+                Login
+              </button>
+            </div>
+            <div class="register-now mt-3 d-flex w-100">
+              <p>Do you have account ?</p>
+              <p class="ml-auto mr-2 create-acc" (click)="onCreateAcc()">
+                Create Accout
+              </p>
+            </div>
+          </form>
+        </mat-tab>
+        <mat-tab>
+          <form [formGroup]="registerForm">
+            <div class="header text-center mb-5 mt-2">
+              <h4>Create Account</h4>
+            </div>
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Username</mat-label>
+              <input
+                matInput
+                placeholder="Username"
+                formControlName="username"
+              />
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Passport</mat-label>
+              <input
+                matInput
+                placeholder="Passport"
+                type="password"
+                formControlName="password"
+              />
+            </mat-form-field>
+            <div class="btn-wrapper h-100">
+              <button
+                class="mr-1"
+                mat-raised-button
+                color="primary"
+                (click)="onRegisterSubmit()"
+              >
+                Register
+              </button>
+              <button
+                class="ml-1"
+                mat-raised-button
+                color="warn"
+                (click)="onCancel()"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+</div>

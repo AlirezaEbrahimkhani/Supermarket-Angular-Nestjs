@@ -1,0 +1,35 @@
+#tab {
+  ::ng-deep mat-tab-header.mat-tab-header {
+    display: none;
+  }
+}
+.wrapper {
+  height: 100vh;
+}
+
+.header-img {
+  height: 100vh;
+  width: 100vw;
+}
+
+.login-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 23vw;
+  height: 43vh;
+  transform: translate(-50%, -50%);
+}
+
+mat-card {
+  border-radius: 20px;
+  background-color: #f3f3fa;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+.create-acc {
+  cursor: pointer;
+}

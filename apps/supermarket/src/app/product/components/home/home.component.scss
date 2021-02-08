@@ -1,0 +1,47 @@
+.navbar {
+  background-color: #181919;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+header {
+  height: 94vh;
+  width: 100vw;
+  overflow: hidden;
+  background: url(./../../../../assets/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  height: 94vh;
+  width: 100vw;
+  background: black;
+  opacity: 0.5;
+}
+
+.header-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: -webkit-center;
+}
+
+.first-text {
+  font-size: 70px;
+}
+
+.second-text {
+  font-size: 30px;
+}
+
+button {
+  color: white;
+  background-color: #007eff;
+  padding: 0 60px;
+}
