@@ -21,7 +21,7 @@ export class ProductService {
     return result.id as string;
   }
 
-  async getAllProdcuts(): Promise<Product[]> {
+  async  getAllProdcuts(): Promise<Product[]> {
     const products = await this.productModel.find().exec();
     return products;
   }
