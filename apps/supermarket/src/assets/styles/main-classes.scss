@@ -1,0 +1,96 @@
+@import "./colors.scss";
+
+.flex {
+  display: flex;
+
+  &-center {
+    @extend .flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-column {
+    @extend .flex;
+    flex-direction: column;
+  }
+}
+
+.font-size {
+  @for $i from 11 through 17 {
+    &-#{$i} {
+      font-size: $i * 0.1rem;
+    }
+  }
+}
+
+.full-height {
+  height: 100%;
+}
+
+.half-height {
+  height: 49%;
+  margin: 5px 0;
+}
+
+.full-width {
+  width: 99%;
+}
+
+.half-width {
+  width: 49%;
+  margin: 0 2px;
+}
+
+.label {
+  margin-left: -15px;
+}
+
+.center {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.disable-select {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.width {
+  @for $i from 1 through 9 {
+    &-#{$i}0 {
+      width: $i * 10%;
+    }
+  }
+}
+
+.wrapper {
+  height: calc(100vh - 344px); //all screen mines header of lot definition stepper and header title and bottom buttons
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.invoice-wrapper {
+  height: calc(100vh - 330px); //all screen mines header of lot definition stepper and header title and bottom buttons
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+button:focus{
+  outline: none;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.header-container-title{
+  color: royalblue;
+}
+
+.result-symbol {
+  text-align: center;
+  align-self: center;
+  max-width: 17px;
+}

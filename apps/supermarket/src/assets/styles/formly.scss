@@ -1,0 +1,273 @@
+formly-field-mat-select {
+  width: 100%;
+}
+
+mat-radio-button {
+  margin-left: 1.5rem;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+formly-field {
+  width: 100%;
+}
+
+formly-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.mat-checkbox {
+  margin-right: 25px;
+}
+
+formly-group .flex-45 {
+  width: 45%;
+}
+formly-group .flex-49 {
+  width: 49%;
+}
+
+.flex-container > .flex-2 {
+  width: 2%;
+}
+
+.flex-container > .flex-5 {
+  width: 5%;
+}
+
+.flex-container .flex-10 {
+  width: 10%;
+}
+
+.flex-container .flex-15 {
+  width: 15%;
+}
+
+.flex-container .flex-20 {
+  width: 20%;
+}
+
+.flex-container .flex-22-5 {
+  width: 22.5%;
+}
+
+.flex-container .flex-25 {
+  width: 25%;
+}
+
+.flex-container .flex-30 {
+  width: 30%;
+}
+
+.flex-container .flex-33 {
+  width: 33.33%;
+}
+
+.flex-container .flex-35 {
+  width: 35%;
+}
+
+.flex-container .flex-40 {
+  width: 40%;
+}
+
+.flex-container .flex-45 {
+  width: 45%;
+}
+
+.flex-container > .flex-49 {
+  width: 49%;
+}
+
+.flex-container > .flex-50 {
+  width: 50%;
+}
+
+.flex-container .flex-50s {
+  width: 50%;
+}
+
+.flex-container .flex-55 {
+  width: 55%;
+}
+
+.flex-container .flex-60 {
+  width: 60%;
+}
+
+.flex-container .flex-65 {
+  width: 65%;
+}
+
+.flex-container .flex-66 {
+  width: 66.66%;
+}
+
+.flex-container .flex-70 {
+  width: 70%;
+}
+
+.flex-container .flex-85 {
+  width: 85%;
+}
+
+.flex-container .flex-90 {
+  width: 90%;
+}
+
+.flex-container .flex-95 {
+  width: 95%;
+}
+
+.flex-container .flex-100 {
+  width: 100%;
+}
+
+.right {
+  float: right;
+}
+
+.padding-5 {
+  padding: 5px;
+}
+
+.padding-10 {
+  padding: 5px 10px;
+}
+
+.padding-15 {
+  padding: 5px 15px;
+}
+
+.padding-15-percent {
+  padding: 5px 15%;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
+}
+
+.padding-right-10 {
+  padding-right: 10px;
+}
+
+.padding-20-10 {
+  padding: 20px 10px;
+}
+
+.padding-30-10 {
+  padding: 30px 10px;
+}
+
+.middle {
+  margin-top: 17px;
+}
+
+.center {
+  margin-top: 27px;
+}
+
+.mat-form-field-subscript-wrapper {
+  margin-top: 0px;
+  top: calc(100% - 0.5em);
+}
+
+.mat-form-field-infix {
+  max-height: 65px;
+}
+
+.radio-padding {
+  width: 100%;
+  mat-radio-group,
+  mat-label {
+    padding-right: 44%;
+  }
+}
+
+.mat-form-field-required-marker {
+  color: #c72828;
+}
+::ng-deep .mat-form-field-required-marker {
+  color: #c72828;
+}
+::ng-deep .mat-focused .mat-form-field-required-marker {
+  color: #c72828;
+}
+
+@media (max-width: 760px) {
+  .flex-container > .flex-5 {
+    width: 10%;
+  }
+
+  .flex-container > .flex-20 {
+    width: 50%;
+  }
+
+  .flex-container > .flex-22-5 {
+    width: 45%;
+  }
+
+  .flex-container > .flex-25 {
+    width: 50%;
+  }
+
+  .flex-container > .flex-45 {
+    width: 90%;
+  }
+
+  .flex-container > .flex-50s {
+    width: 100%;
+  }
+
+  .flex-container > .flex-60 {
+    width: 100%;
+  }
+
+  .flex-container > .flex-40 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  .flex-container > .flex-20 {
+    width: 100%;
+  }
+
+  .flex-container > .flex-22-5 {
+    width: 100%;
+  }
+
+  .flex-container > .flex-25 {
+    width: 100%;
+  }
+
+  .flex-container > .flex-33 {
+    width: 100%;
+  }
+
+  .flex-container > .flex-45 {
+    width: 100%;
+  }
+
+  .flex-container > .flex-50 {
+    width: 100%;
+  }
+
+  .padding-left-10 {
+    padding-left: unset;
+  }
+
+  .padding-right-10 {
+    padding-right: unset;
+  }
+}

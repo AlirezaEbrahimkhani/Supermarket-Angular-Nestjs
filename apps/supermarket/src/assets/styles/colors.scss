@@ -1,0 +1,36 @@
+$color-primary: rgb(66, 176, 41);
+$color-primary-dark: rgb(81, 162, 46);
+$color-red: rgb(231, 68, 47);
+$color-gray: #666666;
+
+.color {
+  &-primary {
+    color: $color-primary;
+  }
+
+  &-gray {
+    color: $color-gray !important;
+  }
+
+  &-red {
+    color: $color-red;
+  }
+}
+
+.bg {
+  &-primary {
+    background-color: $color-primary-dark !important;
+    color: white !important;
+  }
+}
+
+.border {
+  &-primary {
+    border: calc(0.1rem) solid $color-primary !important;
+  }
+}
+
+.warning {
+  background-color: #ffa726;
+  color: white;
+}
