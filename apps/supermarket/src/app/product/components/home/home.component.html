@@ -17,16 +17,17 @@
         <a class="nav-link" [routerLink]="'/home'">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Cart</a>
+        <a class="nav-link" [routerLink]="'/admin/cart'">Cart</a>
       </li>
-      <li class="nav-item" *ngIf="isLogin; else notLogin">
+      <li class="nav-item" *ngIf="isLogin && user.roleID != 1">
+        <a class="nav-link" (click)="onLogout()">Logout</a>
+      </li>
+      <li class="nav-item" *ngIf="isLogin && user.roleID == 1">
         <a class="nav-link" [routerLink]="'/admin/manage'">Prefences</a>
       </li>
-      <ng-template #notLogin>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/auth/login'">Login</a>
-        </li>
-      </ng-template>
+      <li class="nav-item" *ngIf="!isLogin">
+        <a class="nav-link" [routerLink]="'/auth/login'">Login</a>
+      </li>
     </ul>
   </div>
 </nav>

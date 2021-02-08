@@ -29,4 +29,10 @@ export class ProductListComponent implements OnInit {
       height: '61%',
     });
   }
+
+  onAddToCart(item: Product) {
+    this.sharedService.addToCart(item._id).subscribe((response: any) => {
+      console.log(response.Message);
+    });
+  }
 }

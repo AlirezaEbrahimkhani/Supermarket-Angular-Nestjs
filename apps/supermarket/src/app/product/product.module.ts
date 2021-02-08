@@ -23,7 +23,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTooltipModule,
     MatDialogModule,
   ],
-  exports: [],
+  exports: [ProductDetailComponent],
   entryComponents: [ProductDetailComponent],
 })
 export class ProductModule {}

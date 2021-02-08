@@ -19,11 +19,15 @@
           </p>
           <p class="font-weight-bold">{{ item.price }}&nbsp;$</p>
         </mat-card-content>
-        <mat-card-actions class="mb-1">
-          <button mat-raised-button color="primary" (click)="onMoreInfo(item)">More Info</button>
-          <button mat-raised-button color="accent">Add To Cart</button>
-        </mat-card-actions>
       </mat-card>
+      <mat-card-actions class="mb-1">
+        <button mat-raised-button color="primary" (click)="onMoreInfo(item)">
+          More Info
+        </button>
+        <button mat-raised-button color="accent" (click)="onAddToCart(item)">
+          Add To Cart
+        </button>
+      </mat-card-actions>
     </div>
   </div>
 </div>

@@ -21,6 +21,7 @@ export class ManageComponent implements OnInit {
         break;
       case 3:
         localStorage.removeItem('Token');
+        localStorage.removeItem('User');
         this.router.navigate(['/auth/login']);
         break;
     }

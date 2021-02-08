@@ -14,8 +14,11 @@
   max-height: 250px;
 }
 
+
+
 mat-card {
   min-height: 470px !important;
   max-height: 470px !important;
   height: 470px;
+  overflow: auto;
 }

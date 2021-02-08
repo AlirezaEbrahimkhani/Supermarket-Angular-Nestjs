@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../../../shared/models/user.model';
 
 @Component({
   selector: 'supermarket-home',
@@ -6,15 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  username;
+  user: User;
   isLogin: boolean;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     if (localStorage.getItem('Token')) {
       this.isLogin = true;
     }
-    this.username = JSON.parse(localStorage.getItem('User')).username;
+    this.user = JSON.parse(localStorage.getItem('User'));
+  }
+
+  onLogout() {
+    localStorage.removeItem('Token');
+    localStorage.removeItem('User')
+    this.router.navigate(['/auth/login']);
   }
 }
