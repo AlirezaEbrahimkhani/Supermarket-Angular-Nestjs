@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   username;
+  isLogin: boolean;
 
   constructor() {}
 
   ngOnInit(): void {
-    this.username = JSON.parse(localStorage.getItem('User')).username
+    if (localStorage.getItem('Token')) {
+      this.isLogin = true;
+    }
+    this.username = JSON.parse(localStorage.getItem('User')).username;
   }
 }

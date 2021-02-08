@@ -19,9 +19,14 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Cart</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Account Setting</a>
+      <li class="nav-item" *ngIf="isLogin; else notLogin">
+        <a class="nav-link" href="#">Prefences</a>
       </li>
+      <ng-template #notLogin>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+      </ng-template>
     </ul>
   </div>
 </nav>

@@ -1,0 +1,49 @@
+header {
+  height: 20vh;
+  width: 100vw;
+  overflow: hidden;
+  background: url(./../../../../assets/jeshoots-com-LtNvQHdKkmw-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.example-card {
+  max-width: 300px;
+  min-width: 300px;
+  height: 325px;
+  min-height: 325px;
+  max-height: 325px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.mat-card-image {
+  padding: 15px;
+  height: 250px;
+  min-height: 250px;
+  max-height: 250px;
+}
+
+.navbar {
+  background-color: #f3b1b1;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+  color: black;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e7e7e7;
+  color: black;
+  text-align: center;
+
+  p {
+    margin-top: 20px;
+  }
+}
