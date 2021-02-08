@@ -11,17 +11,18 @@ export class ProductService {
   ) {}
 
   async insertProduct(insertProductDTO: InsertProductDTO): Promise<string> {
-    const { title, description, price } = insertProductDTO;
+    const { title, description, price, image_src } = insertProductDTO;
     const newProduct = new this.productModel({
       title,
       description,
       price,
+      image_src,
     });
     const result = await newProduct.save();
     return result.id as string;
   }
 
-  async  getAllProdcuts(): Promise<Product[]> {
+  async getAllProdcuts(): Promise<Product[]> {
     const products = await this.productModel.find().exec();
     return products;
   }
@@ -42,7 +43,7 @@ export class ProductService {
     productId: string,
     updateProductDTO: InsertProductDTO
   ): Promise<void> {
-    const { title, description, price } = updateProductDTO;
+    const { title, description, price, image_src } = updateProductDTO;
     const updatedProduct = await this.findProduct(productId);
     if (title) {
       updatedProduct.title = title;
@@ -52,6 +53,9 @@ export class ProductService {
     }
     if (price) {
       updatedProduct.price = price;
+    }
+    if (image_src) {
+      updatedProduct.image_src = image_src;
     }
     updatedProduct.save();
   }
