@@ -11,9 +11,7 @@ import { CartModule } from './cart/cart.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://Alireza:@lirez@1973@supermarket.4piut.mongodb.net/Supermarket?retryWrites=true&w=majority'
-    ),
+    MongooseModule.forRoot(),
     ProductModule,
     AuthModule,
     FilesModule,
