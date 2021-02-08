@@ -21,4 +21,21 @@ export class AdminService {
   updateProduct(product: Product, prodcutID: string) {
     return this.http.patch(`${this.baseUrl}/products/${prodcutID}`, product);
   }
+
+  getCartData() {
+    return this.http.get(this.baseUrl + '/cart', {
+      headers: new HttpHeaders({
+        Authorization: 'Bearer ' + localStorage.getItem('Token'),
+      }),
+    });
+  }
+
+  updateCart(productIDs) {
+    return this.http.post(`${this.baseUrl}/cart`, null, {
+      params: { productID: productIDs, delFlage: '1' },
+      headers: new HttpHeaders({
+        Authorization: 'Bearer ' + localStorage.getItem('Token'),
+      }),
+    });
+  }
 }

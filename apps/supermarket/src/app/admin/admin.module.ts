@@ -8,6 +8,9 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { ManageComponent } from './components/manage/manage.component';
 import { SharedModule } from '../shared/shared.module';
 import { ManageProductsComponent } from './components/manage-products/manage-products.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ProductModule } from '../product/product.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,7 @@ import { ManageProductsComponent } from './components/manage-products/manage-pro
     AddProductComponent,
     ManageComponent,
     ManageProductsComponent,
+    CartComponent,
   ],
   imports: [
     CommonModule,
@@ -22,6 +26,8 @@ import { ManageProductsComponent } from './components/manage-products/manage-pro
     MatCardModule,
     SharedModule,
     MatProgressBarModule,
+    ProductModule,
+    MatDialogModule,
   ],
 })
 export class AdminModule {}

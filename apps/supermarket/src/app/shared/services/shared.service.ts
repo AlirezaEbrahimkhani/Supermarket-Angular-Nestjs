@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { url } from 'inspector';
 
 @Injectable({
   providedIn: 'root',
@@ -19,5 +20,14 @@ export class SharedService {
 
   getProdcut(productID) {
     return this.http.get(`${this.baseUrl}/products/${productID}`);
+  }
+
+  addToCart(productID) {
+    return this.http.post(`${this.baseUrl}/cart`, null, {
+      params: { productID: productID, delFlage: '0' },
+      headers: new HttpHeaders({
+        Authorization: 'Bearer ' + localStorage.getItem('Token'),
+      }),
+    });
   }
 }

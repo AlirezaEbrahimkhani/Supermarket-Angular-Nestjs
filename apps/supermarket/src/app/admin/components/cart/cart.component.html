@@ -1,0 +1,33 @@
+<div class="text-center my-5">
+  <h4>Product Cart</h4>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of products">
+      <mat-card class="example-card">
+        <mat-card-header class="mb-2">
+          <mat-card-title>{{ item.title }}</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="http://localhost:3333/api/files/{{ item.image_src }}"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <p>
+            {{ item.description }}
+          </p>
+          <p class="font-weight-bold">{{ item.price }}&nbsp;$</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card-actions class="mb-1">
+        <button mat-raised-button color="primary" (click)="onMoreInfo(item)">
+          More Info<mat-icon>info</mat-icon>
+        </button>
+        <button mat-raised-button color="warn" (click)="onDeleteProduct(item)">
+          Remove <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </div>
+  </div>
+</div>
