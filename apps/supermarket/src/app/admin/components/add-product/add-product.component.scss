@@ -1,0 +1,29 @@
+.example-card {
+  max-width: 300px;
+  min-width: 300px;
+  height: 250px;
+  min-height: 250px;
+  max-height: 250px;
+  width: 300px;
+}
+
+.mat-card-image {
+  padding: 15px;
+  height: 250px;
+  min-height: 250px;
+  max-height: 250px;
+}
+
+.row {
+  place-content: center;
+}
+
+.flex-50 {
+  margin-top: 10px;
+  padding-bottom: 80px;
+  place-self: center;
+}
+
+.submit-btn {
+  margin-bottom: 100px;
+}

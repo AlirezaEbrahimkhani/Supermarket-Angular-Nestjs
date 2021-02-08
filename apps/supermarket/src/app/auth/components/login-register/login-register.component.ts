@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../../shared/models/user.model';
 import { AuthService } from '../../shared/auth.service';
 import jwt_decode from 'jwt-decode';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'supermarket-login-register',
@@ -21,7 +22,11 @@ export class LoginRegisterComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {}
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
@@ -32,6 +37,7 @@ export class LoginRegisterComponent implements OnInit {
         if (accessToken) {
           localStorage.setItem('Token', accessToken);
           localStorage.setItem('User', JSON.stringify(jwt_decode(accessToken)));
+          this.router.navigate(['/home']);
         }
       });
   }

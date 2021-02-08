@@ -1,0 +1,66 @@
+<div class="text-center my-5">
+  <h4>Add Product</h4>
+</div>
+<div class="container">
+  <form [formGroup]="form">
+    <div class="row">
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="title" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>price</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="price" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput [rows]="7" formControlName="description"></textarea>
+      </mat-form-field>
+      <div class="image-show half-width" *ngIf="form.value.image_src">
+        <div class="row">
+          <mat-card class="example-card">
+            <img
+              class="mat-card-image"
+              mat-card-image
+              src="http://localhost:3333/api/files/{{ form.value.image_src }}"
+              alt="Photo of a Shiba Inu"
+            />
+          </mat-card>
+        </div>
+      </div>
+      <div class="flex-50 text-center half-width">
+        <div class="mt-1 mb-1" *ngIf="!showProgress; else progress">
+          <input
+            class="d-none"
+            type="file"
+            #fileInput
+            (change)="onSelectFile($event)"
+          />
+          <button
+            dir="rtl"
+            color="primary"
+            mat-stroked-button
+            (click)="fileInput.click()"
+          >
+            <mat-icon class="ticket-form-icon">insert_photo</mat-icon>
+            Upload File
+          </button>
+        </div>
+        <ng-template #progress>
+          <mat-progress-bar
+            mode="indeterminate"
+            class="mt-2"
+          ></mat-progress-bar>
+        </ng-template>
+      </div>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onSubmitForm()"
+      class="full-width submit-btn"
+    >
+      Submit
+    </button>
+  </form>
+</div>

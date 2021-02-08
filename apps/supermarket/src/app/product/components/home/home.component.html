@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="#">Supermarket Application</a>
+  <a class="navbar-brand" [routerLink]="'/home'">Supermarket Application</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -20,11 +20,11 @@
         <a class="nav-link" href="#">Cart</a>
       </li>
       <li class="nav-item" *ngIf="isLogin; else notLogin">
-        <a class="nav-link" href="#">Prefences</a>
+        <a class="nav-link" [routerLink]="'/admin/manage'">Prefences</a>
       </li>
       <ng-template #notLogin>
         <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link" [routerLink]="'/auth/login'">Login</a>
         </li>
       </ng-template>
     </ul>

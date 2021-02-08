@@ -7,8 +7,15 @@
   background-size: cover;
 }
 
+.mat-card-image {
+  padding: 15px;
+  height: 250px;
+  min-height: 250px;
+  max-height: 250px;
+}
+
 mat-card {
-  min-height: 500px !important;
-  max-height: 500px !important;
-  height: 500px;
+  min-height: 470px !important;
+  max-height: 470px !important;
+  height: 470px;
 }

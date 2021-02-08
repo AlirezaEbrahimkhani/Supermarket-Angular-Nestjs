@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="#">Supermarket Application</a>
+  <a class="navbar-brand" [routerLink]="'/home'">Supermarket Application</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -20,60 +20,13 @@
         <a class="nav-link" href="#">Cart</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Prefences</a>
+        <a class="nav-link" [routerLink]="'/admin/manage'">Prefences</a>
       </li>
     </ul>
   </div>
 </nav>
 <header></header>
-<div class="text-center my-5">
-  <h4>Admin Panel</h4>
-</div>
-<div class="card-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <mat-card class="example-card">
-          <img
-            class="mat-card-image"
-            mat-card-image
-            src="./../../../../assets/undraw_Add_files_re_v09g.svg"
-            alt="Photo of a Shiba Inu"
-          />
-          <mat-card-content class="text-center">
-            <b>Add Prodcut</b>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <mat-card class="example-card">
-          <img
-            class="mat-card-image"
-            mat-card-image
-            src="./../../../../assets/undraw_file_manager_j85s.svg"
-            alt="Photo of a Shiba Inu"
-          />
-          <mat-card-content class="text-center">
-            <b>Manage Prodcut</b>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <mat-card class="example-card">
-          <img
-            class="mat-card-image"
-            mat-card-image
-            src="./../../../../assets/undraw_Login_re_4vu2.svg"
-            alt="Photo of a Shiba Inu"
-          />
-          <mat-card-content class="text-center">
-            <b>Log out</b>
-          </mat-card-content>
-        </mat-card>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet class="mb-5"></router-outlet>
 <div class="footer">
   <p>© Copyright 2021 AlirezaEbrahimkhani</p>
 </div>

@@ -6,11 +6,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductRoutesModule } from './product.routes';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [ProductListComponent, HomeComponent],
+  declarations: [ProductListComponent, HomeComponent, ProductDetailComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -19,7 +21,9 @@ import { ProductRoutesModule } from './product.routes';
     MatToolbarModule,
     MatMenuModule,
     MatTooltipModule,
+    MatDialogModule,
   ],
   exports: [],
+  entryComponents: [ProductDetailComponent],
 })
 export class ProductModule {}

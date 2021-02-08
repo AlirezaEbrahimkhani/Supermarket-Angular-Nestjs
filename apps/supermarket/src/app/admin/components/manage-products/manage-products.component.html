@@ -1,7 +1,7 @@
-<div class="container mt-5">
-  <div class="text-center mb-5">
-    <h4>Product List</h4>
-  </div>
+<div class="text-center my-5">
+  <h4>Manage Product</h4>
+</div>
+<div class="container">
   <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let item of products">
       <mat-card class="example-card">
@@ -20,8 +20,12 @@
           <p class="font-weight-bold">{{ item.price }}&nbsp;$</p>
         </mat-card-content>
         <mat-card-actions class="mb-1">
-          <button mat-raised-button color="primary" (click)="onMoreInfo(item)">More Info</button>
-          <button mat-raised-button color="accent">Add To Cart</button>
+          <button mat-raised-button color="primary" (click)="onClick(item , 1)">
+            Modify <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-raised-button color="warn" (click)="onClick(item , 2)">
+            Delete <mat-icon>delete</mat-icon>
+          </button>
         </mat-card-actions>
       </mat-card>
     </div>
